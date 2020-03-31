@@ -1,13 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-        hello
-    </div>
+import ShowButtonClass from './components'
+
+class App extends Component {
+  state = {
+    goodMood: "hi",
+    badMood: "bye"
+  }
+
+  render(){
+    return (
+      <div className="App">
+          <ShowButtonClass 
+          goodMood={this.state.goodMood} 
+          badMood={this.state.badMood}
+          />
+      </div>
   );
+  }
 }
 
 export default App;
