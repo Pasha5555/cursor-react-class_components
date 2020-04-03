@@ -1,25 +1,16 @@
 import React, { Component } from 'react';
-import './App.css';
+import './contacts.css'
 
-import ShowButtonClass from './components'
+import ContactsClass from './contacts'
 
 class App extends Component {
-  state = {
-    goodMood: "hi",
-    badMood: "bye"
-  }
-
-  render(){
+  render() {
     return (
       <div className="App">
-          <ShowButtonClass 
-          goodMood={this.state.goodMood} 
-          badMood={this.state.badMood}
-          />
+        <ContactsClass />
       </div>
-  );
+    );
   }
 }
 
 export default App;
-///cvb
