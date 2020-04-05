@@ -70,9 +70,9 @@ export default class ContactsClass extends Component {
           <div className="Header">
             <input className="Input" size="30" onChange={this.changeFilter} value={filter} height="0px" placeholder="Search..."/>
             <div>
-              <input type="checkbox" id="male" className="checkbox" onClick={this.settingsGender} name="male" checked={male}/><span>Male</span>
-              <input type="checkbox" id="famale" className="checkbox" onClick={this.settingsGender} name="female" checked={female}/><span>Female</span>
-              <input type="checkbox" id="undefine" className="checkbox" onClick={this.settingsGender} name="undefine" checked={undefine}/><span>Undefine</span>
+              <input type="checkbox" id="male" className="checkbox" onClick={this.settingsGender} name="male" checked={male}/><b><span>Male</span></b>
+              <input type="checkbox" id="famale" className="checkbox" onClick={this.settingsGender} name="female" checked={female}/><b><span>Female</span></b>
+              <input type="checkbox" id="undefine" className="checkbox" onClick={this.settingsGender} name="undefine" checked={undefine}/><b><span>Undefine</span></b>
             </div>
           </div>
           <div className="Contact">

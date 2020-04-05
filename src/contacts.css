@@ -1,7 +1,7 @@
 .Container{
     display: block;
     margin-top: 10px;
-    background-color: rgb(108, 108, 211);
+    /* background-color: rgb(108, 108, 211); */
     border-radius: 10%;
     text-align: center;
     font-family:  Monotype Corsiva;
@@ -9,6 +9,7 @@
     margin: 150px auto;
     border: 5px solid #0c0909;
     height: 700px;
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQELTlYuV3GJEdtOdHyUgElV_QMOqr8fj1s_Ry0mJvVawfHzZAv&usqp=CAU);
 }
 .Header{
     margin-top: 50px;
