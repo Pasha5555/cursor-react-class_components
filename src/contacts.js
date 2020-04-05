@@ -42,12 +42,14 @@ export default class ContactsClass extends Component {
         female: true,
         undefine: true
       }
+
       
       changeFilter = (event) =>{
         this.setState({filter: event.target.value})
       }
       
       settingsGender = (event) => {
+        event.persist();
         this.setState({
           [event.target.name]: event.target.checked
         });
@@ -56,11 +58,11 @@ export default class ContactsClass extends Component {
       
       render(){
         const { filter, female, male, undefine } = this.state;
-        const regex= new RegExp(this.state.filter, 'g');
+        const regex= new RegExp(this.state.filter, 'i');
         
         const data = this.state.contacts.filter((item)=>(regex.test(item.lastName)||
         regex.test(item.firstName)||regex.test(item.phone)) && 
-        (item.gender ? (female && item.gender === "female") || (male && item.gender === "male") : undefine));
+        (item.gender ? (female && item.gender === "male") || (male && item.gender === "female") : undefine));
         
         
         return(
@@ -68,11 +70,9 @@ export default class ContactsClass extends Component {
           <div className="Header">
             <input className="Input" size="30" onChange={this.changeFilter} value={filter} height="0px" placeholder="Search..."/>
             <div>
-            <label className="checkbox-label">
-              <input type="checkbox" id="male" className="checkbox" onChange={this.settingsGender} name="male" checked={male}/><span>Male</span>
-              <input type="checkbox" id="famale" className="checkbox" onChange={this.settingsGender} name="female" checked={female}/><span>Female</span>
-              <input type="checkbox" id="undefine" className="checkbox" onChange={this.settingsGender} name="undefine" checked={undefine}/><span>Undefine</span>
-            </label>
+              <input type="checkbox" id="male" className="checkbox" onClick={this.settingsGender} name="male" checked={male}/><span>Male</span>
+              <input type="checkbox" id="famale" className="checkbox" onClick={this.settingsGender} name="female" checked={female}/><span>Female</span>
+              <input type="checkbox" id="undefine" className="checkbox" onClick={this.settingsGender} name="undefine" checked={undefine}/><span>Undefine</span>
             </div>
           </div>
           <div className="Contact">
