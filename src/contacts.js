@@ -84,7 +84,7 @@ export default class ContactsClass extends Component {
            lastName={item.lastName}
            phone={item.phone}
            gender={item.gender} 
-           />)) : <p>NO DATA</p>
+           />)) : <b><p>NO DATA</p></b>
             }
           </div>
         </div>

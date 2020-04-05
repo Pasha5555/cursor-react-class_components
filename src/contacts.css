@@ -10,6 +10,7 @@
     border: 5px solid #0c0909;
     height: 700px;
     background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQELTlYuV3GJEdtOdHyUgElV_QMOqr8fj1s_Ry0mJvVawfHzZAv&usqp=CAU);
+    opacity: 0.9;
 }
 .Header{
     margin-top: 50px;
@@ -19,9 +20,10 @@
     height: 25px;
 }
 li{
-    background-color:rgb(145, 138, 138);
+    background-color:rgb(254, 255, 227);
     text-align: center;
     margin: 1px;
+    opacity: 0.9;
    
 }
 ul{
